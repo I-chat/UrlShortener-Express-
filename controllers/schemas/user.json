@@ -1,0 +1,30 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://UrlShortener/schemas/user.json#",
+  "title": "User",
+  "type": "object",
+  "properties": {
+    "firstname":{
+      "type": "string",
+      "pattern": "^[A-Za-z][A-Za-z]*$"
+    },
+    "lastname":{
+      "type": "string",
+      "pattern": "^[A-Za-z][A-Za-z]*$"
+    },
+    "email":{
+      "type": "string",
+      "format": "email"
+    },
+    "password":{
+      "type": "string",
+      "pattern": "^[A-Za-z0-9][A-Za-z0-9]*$"
+    },
+    "confirmPassword":{
+      "type": "string",
+      "pattern": "^[A-Za-z0-9][A-Za-z0-9]*$"
+    }
+  },
+  "required":["firstname", "lastname", "email", "password", "confirmPassword"],
+  "additionalProperties": false
+}
